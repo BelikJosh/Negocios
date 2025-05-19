@@ -1,0 +1,1 @@
+<div class="productos">On hover add class ".ver-detalles"</div>

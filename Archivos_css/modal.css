@@ -1,0 +1,165 @@
+/* Estilo general para los modales */
+.modal {
+    display: none; /* Ocultos por defecto */
+    position: fixed;
+    z-index: 1; /* Aparece encima del contenido */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo semitransparente */
+    transition: opacity 0.3s ease; /* Transición suave */
+}
+
+.modal-content {
+    background-color: #fff;
+    margin: 10% auto;
+    padding: 20px;
+    border-radius: 8px;
+    width: 80%;
+    max-width: 500px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 0.3s ease;
+}
+
+/* Animación de entrada */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Estilo para el botón de cerrar */
+.close {
+    color: #aaa;
+    font-size: 28px;
+    font-weight: bold;
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Títulos dentro de los modales */
+h2 {
+    font-size: 24px;
+    color: #333;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Estilo para los formularios y botones */
+form label {
+    font-size: 16px;
+    color: #333;
+    display: block;
+    margin: 10px 0 5px;
+}
+
+form input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+form button {
+    width: 100%;
+    padding: 12px;
+    background-color: #4CAF50;
+    color: white;
+    font-size: 18px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+form button:hover {
+    background-color: #45a049;
+}
+
+/* Estilo para los botones de pago */
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    color: #fff;
+    background-color: #007BFF;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+/* Estilo para el contenido del recibo */
+#reciboContenido {
+    font-size: 16px;
+    color: #333;
+    margin-top: 20px;
+    white-space: pre-wrap; /* Para que el texto se ajuste al tamaño del contenedor */
+}
+
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    font-weight: bold;
+}
+
+
+
+/* Estilo para la tabla */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    font-family: Arial, sans-serif;
+}
+
+/* Estilo para las celdas de la tabla */
+th, td {
+    border: 1px solid #ddd; /* Línea gris clara alrededor de cada celda */
+    padding: 10px;
+    text-align: left;
+}
+
+/* Estilo para las cabeceras de la tabla */
+th {
+    background-color: #f2f2f2;
+    font-weight: bold;
+}
+
+/* Estilo para el total */
+p {
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+/* Mejorar la visibilidad de la tabla */
+table th, table td {
+    border: 1px solid #ddd;
+}
+
+/* Opcional: Añadir sombra o bordes más fuertes para la tabla */
+table {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}

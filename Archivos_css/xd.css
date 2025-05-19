@@ -1,0 +1,113 @@
+/* Estilo general para el modal */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    overflow: auto;
+    font-family: 'Arial', sans-serif;
+}
+
+.modal-content {
+    background-color: #ffffff;
+    margin: 5% auto;
+    padding: 20px;
+    border-radius: 10px;
+    width: 80%;
+    max-width: 600px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Botón de cierre */
+.close {
+    color: #999;
+    float: right;
+    font-size: 1.5rem;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close:hover {
+    color: #333;
+}
+
+/* Encabezado */
+.recibo-header h2 {
+    text-align: center;
+    font-size: 1.8rem;
+    color: #444;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #ddd;
+    padding-bottom: 10px;
+}
+
+/* Información de la empresa */
+.empresa-info {
+    text-align: center;
+    font-size: 0.9rem;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+.empresa-info h3 {
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+/* Divisor estilizado */
+.divider {
+    border: 0;
+    border-top: 1px solid #ddd;
+    margin: 20px 0;
+}
+
+/* Datos del cliente */
+.cliente-info h4 {
+    font-size: 1.2rem;
+    color: #444;
+    margin-bottom: 10px;
+}
+
+.cliente-info p {
+    font-size: 0.95rem;
+    color: #555;
+}
+
+/* Tabla de detalles */
+.tabla-recibo {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+    font-size: 0.95rem;
+}
+
+.tabla-recibo th,
+.tabla-recibo td {
+    text-align: left;
+    padding: 12px;
+    border: 1px solid #ddd;
+}
+
+.tabla-recibo th {
+    background-color: #f8f8f8;
+    font-weight: bold;
+    color: #333;
+}
+
+.tabla-recibo td {
+    color: #555;
+}
+
+/* Total */
+.total-compra {
+    text-align: right;
+    font-size: 1.2rem;
+    color: #333;
+    margin-top: 20px;
+    font-weight: bold;
+}

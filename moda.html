@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recibo de Compra</title>
+    <link rel="stylesheet" href="xd.css">
+    <!-- Incluimos la librería QRCode.js -->
+    <script src="https://cdn.jsdelivr.net/npm/qrcode/build/qrcode.min.js"></script>
+    <!-- Incluimos la librería html2canvas -->
+    <script src="https://cdn.jsdelivr.net/npm/html2canvas/dist/html2canvas.min.js"></script>
+</head>
+<body>
+    <!-- Botón para abrir el modal -->
+    <button onclick="mostrarModal()">Abrir Recibo</button>
+
+    <!-- Modal -->
+    <div id="reciboModal" class="modal">
+        <div class="modal-content">
+            <span id="closeReciboModal" class="close">&times;</span>
+            <div class="recibo-header">
+                <h2>Recibo de Compra</h2>
+            </div>
+            <div id="reciboContenido">
+                <!-- Información de la empresa -->
+                <div class="empresa-info">
+                    <h3>Dackom</h3>
+                    <p>Calle Tecnologías, No. 123</p>
+                    <p>Teléfono: (123) 456-7890</p>
+                    <p>Email: contacto@dackom.com</p>
+                </div>
+                <hr class="divider">
+                <!-- Datos del cliente -->
+                <div class="cliente-info">
+                    <h4>Datos del Cliente</h4>
+                    <p><strong>Nombre:</strong> Juan Pérez</p>
+                    <p><strong>Email:</strong> juan.perez@example.com</p>
+                    <p><strong>Fecha de Compra:</strong> 2024-12-03</p>
+                </div>
+                <hr class="divider">
+                <!-- Detalles de la compra -->
+                <div class="compra-detalles">
+                    <h4>Detalles de la Compra</h4>
+                    <table class="tabla-recibo">
+                        <thead>
+                            <tr>
+                                <th>Producto</th>
+                                <th>Cantidad</th>
+                                <th>Precio Unitario</th>
+                                <th>Total</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Procesador Intel Core i5</td>
+                                <td>1</td>
+                                <td>$250.00</td>
+                                <td>$250.00</td>
+                            </tr>
+                            <tr>
+                                <td>Memoria RAM 16GB</td>
+                                <td>2</td>
+                                <td>$80.00</td>
+                                <td>$160.00</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <hr class="divider">
+                <!-- Total -->
+                <div class="total-compra">
+                    <h4>Total: $410.00</h4>
+                </div>
+                <hr class="divider">
+                <!-- Sello Digital del SAT -->
+                <div class="sello-digital">
+                    <h4>Sello Digital del SAT</h4>
+                    <div id="qrCode"></div> <!-- Aquí se generará el QR -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Ejecutar el script después de cargar el DOM
+        document.addEventListener("DOMContentLoaded", function () {
+            const modal = document.getElementById("reciboModal");
+            const closeBtn = document.getElementById("closeReciboModal");
+
+            // Mostrar el modal
+            window.mostrarModal = function () {
+                modal.style.display = "block";
+
+                // Generar datos aleatorios para el Sello Digital del SAT
+                const selloDigital = "SAT-" + Math.random().toString(36).substring(2, 15).toUpperCase();
+
+                // Generar código QR
+                const qrCodeContainer = document.getElementById("qrCode");
+
+                // Limpia el contenedor antes de generar un nuevo QR
+                qrCodeContainer.innerHTML = "";
+
+                // Genera el código QR
+                QRCode.toCanvas(qrCodeContainer, selloDigital, { width: 150, colorDark: "#000000" }, function (error) {
+                    if (error) console.error("Error al generar el QR:", error);
+                });
+            };
+
+            // Cerrar el modal
+            closeBtn.onclick = function () {
+                modal.style.display = "none";
+            };
+
+            // Cerrar al hacer clic fuera del modal
+            window.onclick = function (event) {
+                if (event.target === modal) {
+                    modal.style.display = "none";
+                }
+            };
+        });
+    </script>
+</body>
+</html>

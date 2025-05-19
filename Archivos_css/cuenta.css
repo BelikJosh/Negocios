@@ -1,0 +1,186 @@
+html {
+    font-size: 62.5%;  /* Reset para REMS - 62.5 = 10px de 16px */
+}
+body{
+    margin: 0;
+    padding: 0;
+    background-image: url(fondo-cuenta.jpg);
+    opacity: 1;
+}
+::selection{
+    color: #0078D7;
+    background-color:  #ffffff00;
+}
+
+header{
+    padding: 3.8rem 0 3.6rem 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+header img{
+    width: 15rem;
+    height: auto;
+}
+.contenedor{
+    display: flex;
+    justify-content: center;
+    padding: 0;
+    margin: 0rem auto;
+    width: 100%;
+}
+
+.derecha{
+    background-color: #000000c7;
+    border: 1px solid #ffffff;
+    border-radius: 1rem;
+    height: 63vh;
+    padding: 3.2rem 5rem 4.8rem 6rem;
+    font-family: Lato;
+}
+.derecha h1{
+    text-transform: capitalize;
+    font-size: 2.7rem;
+    margin: 0;
+    color: #ffffff;
+    font-family: Lato;
+    font-weight: 900;
+}
+form{
+    display: inline-block;
+    padding-top: 2rem;
+}
+form .campos{
+    margin-top: 2.5rem;
+    padding: 1.2rem 1.6rem 1.2rem 1.6rem;
+    width: 23rem;
+    outline: none;
+    color: white;
+    background-color: transparent;
+    border: .1rem solid #cccccc;
+    outline-color: #000000;
+}
+form input::placeholder{
+    color: white;
+}
+form .campos:focus{
+    border-color:  #0078D7;
+    box-shadow: 0 0 .5rem 0  #0078D7;
+}
+.boton{
+    background-color: #0076d7;
+    color: white;
+    outline: none;
+    border: none;
+    border-radius: .4rem;
+    margin-top: 3rem;
+    width: 26.5rem;
+    padding: 1.2rem 1.6rem 1.2rem 1.6rem;
+}
+
+.barra{
+    margin-top: 3rem;
+}
+
+.barra p{
+    font-size: 1.4rem;
+    text-transform: capitalize;
+    background-color: transparent;
+    text-align: center;
+    color: white;
+    padding-left: 2rem;
+    padding-right: 2rem;
+}
+.crear{
+    border: 1px solid #cccccc;
+    margin-top: 3rem;
+    padding: 1.2rem 1.6rem 1.2rem 1.6rem;
+}
+.crear p{
+    font-family: lato;
+    font-size: 1.4rem;
+    text-transform: capitalize;
+    text-align: center;
+    color: white;
+    margin: 0;
+
+}
+a{
+    text-decoration: none;
+}
+/*------------------footer--------------------------*/
+.footer{
+    display: flex;
+    justify-content: center;
+    padding: 7rem;
+    border-top: 1px solid #cccccc;
+    margin-top: 5rem;
+    height: 30vh;
+    background-color:  #131313;
+}
+.footer section{
+    padding-right: 15rem;
+}
+.footer section:last-of-type{
+    padding-right: 0;
+}
+.footer section h3{
+    color: #ffffff;
+    font-weight: bold;
+    font-size: 1.6rem;
+    font-family: lato;
+    text-transform: capitalize;
+}
+.footer section p{
+    font-family: Lato;
+    color: #ffffff;
+    font-size: 1.4rem;
+    padding-top: 1.5rem;
+    text-transform: capitalize;
+    font-weight: 400;
+    display: flex;
+    flex-direction: row;
+}
+.footer section p i{
+    color: white;
+    font-size: 2.2rem;
+    padding-right: .8rem;
+    
+   
+}
+/*---------------------copy-----------------------*/
+.copy{
+    border-top: 1px solid #cccccc;
+    height: 6rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #131313;
+}
+.copy p{
+    font-size: 1.2rem;
+    color: #ffffff;
+    text-transform: capitalize;
+    font-family: lato;
+}
+.arriba{
+    background-color: #272727;
+    background-image: url();
+    position: fixed; 
+    bottom: 10px; 
+    right: 2%; 
+    height: 50px; 
+    width: 50px;
+}
+.arriba:hover{
+    background-color: #636363;
+    transition: all .5s;
+}
+.arriba i{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 1rem;
+    font-size: 3rem;
+    color: white;
+}
