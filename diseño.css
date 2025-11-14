@@ -1,0 +1,290 @@
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+  scroll-padding-top: 0rem;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body {
+  font-family: "Montserrat", serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  color: #000000;
+  font-size: 2rem;
+}
+
+body.overflow-hidden {
+  overflow: hidden;
+}
+
+p {
+  color: #000000;
+  line-height: 1.5;
+}
+
+.contenedor {
+  width: 100%;
+  max-width: 120rem;
+  margin: 0 auto; /* Centra el contenedor y añade márgenes automáticos a los lados */
+  padding: 0 2rem; /* Añade un padding lateral para el margen */
+}
+
+a {
+  text-decoration: none;
+}
+
+h1,
+h2,
+h3 {
+  margin: 0 0 5rem 0;
+  font-weight: 900;
+}
+
+h1 {
+  font-size: 4rem;
+}
+
+h2 {
+  font-size: 4.6rem;
+}
+
+h3 {
+  font-size: 6rem;
+  text-align: center;
+}
+
+img {
+  max-width: 100%;
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+body > section {
+  padding: 10rem 0;
+}
+
+.header {
+  background: linear-gradient(to right, #ADD8E6, #00008B);
+}
+
+@media (min-width: 768px) {
+  .header.fixed {
+      position: fixed;
+      left: 0;
+      top: 0;
+      width: 100%;
+      box-shadow: 0.1rem 0.2rem 0.3rem #333;
+  }
+}
+
+.header .contenido-header {
+  padding: 2rem;
+}
+
+@media (min-width: 768px) {
+  .header .contenido-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+  }
+}
+
+.header h1 {
+  color: #FFFFFF;
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  .header h1 {
+      text-align: left;
+      margin: 0;
+  }
+}
+
+.navegacion-principal {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+
+@media (min-width: 768px) {
+  .navegacion-principal {
+      flex-direction: row;
+  }
+}
+
+.navegacion-principal a {
+  color: #FFFFFF;
+  font-size: 2.4rem;
+}
+
+.navegacion-principal a:hover,
+.navegacion-principal a.active {
+  color: #fdda00;
+}
+
+.icon {
+  width: 10%;
+  height: 10%;
+}
+
+.form_buscar {
+  display: flex;
+  gap: 1rem;
+  margin-top: 12px;
+}
+
+.busqueda {
+  flex: 1;
+  padding: 1rem;
+  font-size: 1.6rem;
+  border: 1px solid #dddddd;
+  border-radius: 0.5rem;
+}
+
+.filtro {
+  padding: 1rem;
+  font-size: 1.6rem;
+  border: 1px solid #dddddd;
+  border-radius: 0.5rem;
+}
+
+.btn_buscar {
+  background: linear-gradient(to right, #ADD8E6, #00008B);
+  color: #ffffff;
+  border: none;
+  padding: 1rem 2rem;
+  font-size: 1.6rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn_buscar:hover {
+  background-color: #1a5a8a;
+}
+
+/* Estilos base para la tabla */
+.tabla-contenedor {
+  width: 100%;
+  overflow-x: auto; /* Permite el scroll horizontal */
+  margin: 2rem 0;
+  border-radius: 1rem;
+  box-shadow: 0 0 2rem rgba(0, 0, 0, 0.1);
+}
+
+.tabla-inventario {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 1.6rem;
+}
+
+.tabla-inventario thead tr {
+  background: linear-gradient(to right, #ADD8E6, #00008B);
+  color: #ffffff;
+  text-align: left;
+  font-weight: bold;
+}
+
+.tabla-inventario th,
+.tabla-inventario td {
+  padding: 1.5rem;
+}
+
+.tabla-inventario th {
+  font-size: 1.8rem;
+  text-transform: uppercase;
+}
+
+.tabla-inventario tbody tr {
+  border-bottom: 1px solid #dddddd;
+  transition: background-color 0.3s ease;
+}
+
+.tabla-inventario tbody tr:nth-of-type(even) {
+  background-color: #f9f9f9;
+}
+
+.tabla-inventario tbody tr:last-of-type {
+  border-bottom: 2px solid #2885C0;
+}
+
+.tabla-inventario tbody tr:hover {
+  background-color: #e0f7ff;
+  /* cursor: pointer; */ /* Eliminado */
+}
+
+.tabla-inventario td {
+  color: #333333;
+  font-size: 1.6rem;
+}
+
+/* Ajustes específicos para las celdas */
+.tabla-inventario td:nth-child(1) {
+  width: 15%;
+  font-size: 1.4rem;
+}
+
+.tabla-inventario td:nth-child(2),
+.tabla-inventario td:nth-child(3),
+.tabla-inventario td:nth-child(4),
+.tabla-inventario td:nth-child(5),
+.tabla-inventario td:nth-child(6),
+.tabla-inventario td:nth-child(7) {
+  width: auto;
+  font-size: 1.8rem;
+}
+
+/* Media query para pantallas pequeñas (menores a 768px) */
+@media (max-width: 767px) {
+  .tabla-contenedor {
+      overflow-x: visible; /* Desactiva el scroll horizontal */
+  }
+
+  .tabla-inventario {
+      min-width: 100%; /* La tabla ocupa el 100% del ancho */
+  }
+
+  .tabla-inventario thead {
+      display: none; /* Oculta la cabecera de la tabla */
+  }
+
+  .tabla-inventario tbody tr {
+      display: block; /* Convierte las filas en bloques */
+      margin-bottom: 1rem; /* Espacio entre tarjetas */
+      border: 1px solid #ddd; /* Borde para cada tarjeta */
+      border-radius: 0.5rem; /* Bordes redondeados */
+      background-color: #f9f9f9; /* Fondo de la tarjeta */
+  }
+
+  .tabla-inventario tbody tr:hover {
+      background-color: #e0f7ff; /* Efecto hover */
+  }
+
+  .tabla-inventario td {
+      display: block; /* Convierte las celdas en bloques */
+      text-align: right; /* Alinea el texto a la derecha */
+      font-size: 1.4rem; /* Tamaño de fuente más pequeño */
+      padding: 0.5rem 1rem; /* Espaciado interno */
+      border-bottom: 1px solid #ddd; /* Borde inferior para separar los datos */
+  }
+
+  .tabla-inventario td:last-child {
+      border-bottom: none; /* Elimina el borde inferior del último elemento */
+  }
+
+  .tabla-inventario td::before {
+      content: attr(data-label); /* Muestra el nombre de la columna como un label */
+      float: left; /* Alinea el label a la izquierda */
+      font-weight: bold; /* Texto en negrita */
+      text-transform: uppercase; /* Convierte el texto a mayúsculas */
+      color: #333; /* Color del texto */
+  }
+}

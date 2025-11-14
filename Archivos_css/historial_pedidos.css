@@ -1,0 +1,62 @@
+/* historial_pedidos.css */
+
+.historial-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 80%; /* Ajusta el ancho del contenedor */
+    max-width: 1000px; /* Ancho máximo */
+    margin: 20px auto; /* Centrar horizontalmente y agregar margen */
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+th {
+    background-color: #3264d7; /* Color azul para la fila de encabezados */
+    color: white; /* Color de texto blanco para los encabezados */
+}
+
+tr:nth-child(even) {
+    background-color: white; /* Fondo blanco para filas pares */
+}
+
+tr:nth-child(odd) {
+    background-color: white; /* Fondo blanco para filas impares */
+}
+
+tr:hover {
+    background-color: #f0f0f0; /* Color de fondo al pasar el ratón */
+}
+
+.no-pedidos {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 1.2em;
+    color: #888;
+}
+
+.regresar-btn {
+    background-color: #3264d7;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+}
+
+.regresar-btn:hover {
+    background-color: #264a9d;
+}

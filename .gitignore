@@ -1,0 +1,37 @@
+# Dependencias de PHP (Composer)
+vendor/
+
+# Archivos de Composer que NO deben ignorarse:
+# composer.json y composer.lock se deben subir, así que no los ignores.
+
+# Archivos de sistema
+.DS_Store
+Thumbs.db
+
+# Archivos de entorno (si los llegas a usar)
+.env
+.env.local
+.env.development
+.env.production
+
+# Logs
+*.log
+
+# Sistemas de editor
+.vscode/
+!.vscode/extensions.json
+.idea/
+
+# Cachés temporales
+.cache/
+tmp/
+temp/
+
+# Node (si algún día agregas JS con npm)
+node_modules/
+
+# Archivos empaquetados
+*.zip
+*.tar
+*.tar.gz
+*.rar
